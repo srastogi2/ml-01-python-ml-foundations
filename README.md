@@ -7,13 +7,15 @@ Building in public — Technical Director transitioning to AI Engineer.
 
 | Repo | Covers | Status |
 |------|--------|--------|
-| [ml-01-python-ml-foundations](https://github.com/srastogi2/ml-01-python-ml-foundations) | pandas, NumPy, matplotlib, seaborn, scikit-learn | ✅ Done 
+| [ml-01-python-ml-foundations](https://github.com/yourusername/ml-01-python-ml-foundations) | pandas, NumPy, matplotlib, seaborn, scikit-learn | ✅ Done |
+
 
 ## Projects in this repo
 
 1. **pandas & NumPy basics** — data manipulation fundamentals
 2. **Data visualisation** — matplotlib & seaborn
-3. **Titanic classifier** — first end-to-end ML workflow, 0.76 on Kaggle leaderboard
+3. **Advertising classifier** — Logistic Regression, 0.926 accuracy
+4. **Titanic classifier** — first end-to-end ML workflow, 0.76 on Kaggle leaderboard
 
 ---
 
@@ -49,7 +51,31 @@ Seaborn's `pairplot()` generates a full matrix of scatter plots across all numer
 
 ---
 
-## 3. Titanic classifier — first end-to-end ML workflow
+## 3. Advertising classifier — Logistic Regression
+
+Built a classifier to predict whether a user clicks on an online advertisement, using the bootcamp's advertising dataset — the course's guided Logistic Regression project.
+
+### Workflow
+```
+Load dataset → EDA (age, income, daily internet usage vs click behaviour) → 
+Feature selection → Train/test split → Train Logistic Regression → 
+Evaluate (accuracy, classification report)
+```
+
+### Results
+Achieved **0.926 accuracy** on the held-out test set, with a strong classification report across both classes (clicked / did not click).
+
+### Key learnings
+- This dataset is far more separable than Titanic — user behaviour features (time on site, internet usage, age) correlate strongly with the click outcome, which explains the higher accuracy
+- Confirmed the full supervised learning workflow a second time on a cleaner dataset, reinforcing the train/test split → fit → predict → evaluate pattern
+- Comparing this project's 0.926 to Titanic's 0.76 was a useful lesson: accuracy is dataset-dependent, not just model-dependent — a "good" score means different things on different problems
+
+### What surprised me
+How much a clean, well-separated dataset improves results versus real-world messy data like Titanic — a preview of why data quality work matters more than model choice in many real projects.
+
+---
+
+## 4. Titanic classifier — first end-to-end ML workflow
 
 Built a survival classifier on the Kaggle Titanic dataset using **Logistic Regression**, covering the complete ML workflow from raw data to a scored competition submission.
 
@@ -90,7 +116,8 @@ Each project lives in its own subfolder:
 ```
 01-pandas-numpy/
 02-visualization/
-03-titanic-classifier/
+03-advertising-classifier/
+04-titanic-classifier/
 ```
 
 ## Stack
