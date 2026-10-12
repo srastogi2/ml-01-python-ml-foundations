@@ -1,4 +1,4 @@
-# ml-01 — Python ML Foundations
+# ml-01 — ML Foundations
 
 Part of my AI Engineering transition — 20-week structured roadmap from Technical Director to AI Engineer.
 
@@ -7,8 +7,14 @@ Building in public — Technical Director transitioning to AI Engineer.
 
 | Repo | Covers | Status |
 |------|--------|--------|
-| [ml-01-python-ml-foundations](https://github.com/yourusername/ml-01-python-ml-foundations) | pandas, NumPy, matplotlib, seaborn, scikit-learn | ✅ Done |
+| [ml-01-python-ml-foundations](https://github.com/srastogi2/ml-01-python-ml-foundations) | pandas, NumPy, matplotlib, seaborn, scikit-learn, TensorFlow | ✅ Done |
+| llm-01-qa-bot | LLM APIs, prompt engineering | 🔜 Week 5 |
+| llm-02-rag-pipeline | LangChain, vector DBs, evaluation — data integration domain | 🔜 Week 8 |
+| llm-03-agent | LangGraph, tool use, MCP | 🔜 Week 10 |
 
+## Courses completed
+- Python for Data Science and Machine Learning Bootcamp — Jose Portilla (Udemy)
+- Supervised Machine Learning: Regression and Classification — Andrew Ng, DeepLearning.AI & Stanford (Coursera)
 
 ## Projects in this repo
 
@@ -16,6 +22,7 @@ Building in public — Technical Director transitioning to AI Engineer.
 2. **Data visualisation** — matplotlib & seaborn
 3. **Advertising classifier** — Logistic Regression, 0.926 accuracy
 4. **Titanic classifier** — first end-to-end ML workflow, 0.76 on Kaggle leaderboard
+5. **LendingClub loan repayment** — first neural network, TensorFlow/Keras
 
 ---
 
@@ -105,6 +112,30 @@ A meaningful share of very high Titanic leaderboard scores come from lookups aga
 
 ---
 
+## 5. LendingClub loan repayment — first neural network
+
+Built a binary classifier in **TensorFlow/Keras** to predict whether a LendingClub borrower repays their loan, following the bootcamp's guided deep learning project.
+
+### Workflow
+```
+Load LendingClub data → EDA (loan status balance, feature correlations) → 
+Handle missing values & drop leaky columns → Encode categoricals (dummies) → 
+Train/test split → Scale features (MinMaxScaler) → 
+Build Sequential model (Dense + Dropout) → Train with validation data → 
+Evaluate (loss curves, classification report, confusion matrix)
+```
+
+### Key learnings
+- Keras follows a clear build → compile → fit → evaluate pattern, close to scikit-learn's fit/predict but with explicit control over layers, loss and optimiser
+- Feature scaling is not optional for neural networks — unscaled inputs slow or destabilise training
+- Plotting training vs validation loss per epoch is the quickest way to spot overfitting; Dropout layers and early stopping are the standard fixes
+- The dataset is imbalanced (most loans are repaid), so the classification report matters more than headline accuracy — the hard part is catching the minority class of defaults
+
+### What surprised me
+How much of the work is data preparation rather than the network itself — cleaning, encoding and removing columns that leak the outcome took far longer than defining the model.
+
+---
+
 ## How to run
 
 ```bash
@@ -118,11 +149,13 @@ Each project lives in its own subfolder:
 02-visualization/
 03-advertising-classifier/
 04-titanic-classifier/
+05-lendingclub-tensorflow/
 ```
 
 ## Stack
 - Python 3.11
 - pandas, NumPy, matplotlib, seaborn, scikit-learn
+- TensorFlow / Keras
 - Jupyter Notebook
 
 ## License
