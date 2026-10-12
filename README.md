@@ -1,6 +1,6 @@
 # ml-01 — ML Foundations
 
-Part of my AI Engineering transition — 20-week structured roadmap from Technical Director to AI Engineer.
+Part of my AI Engineering transition — 20-week structured roadmap from Technical Director to AI Powered Engineer/Architect.
 
 ## My AI engineering roadmap
 Building in public — Technical Director transitioning to AI Engineer.
