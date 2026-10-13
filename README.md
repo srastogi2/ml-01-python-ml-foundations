@@ -7,7 +7,7 @@ Building in public — Technical Director transitioning to AI Engineer.
 
 | Repo | Covers | Status |
 |------|--------|--------|
-| [ml-01-practice](https://github.com/srastogi2/ML-01-Practice) | pandas, NumPy, matplotlib, seaborn, scikit-learn, TensorFlow | ✅ Done |
+| [ml-01-practice](https://github.com/srastogi2/ml-01-python-ml-foundations) | pandas, NumPy, matplotlib, seaborn, scikit-learn, TensorFlow | ✅ Done |
 | llm-01-qa-bot | LLM APIs, prompt engineering | 🔜 Week 5 |
 | llm-02-rag-pipeline | LangChain, vector DBs, evaluation — data integration domain | 🔜 Week 8 |
 | llm-03-agent | LangGraph, tool use, MCP | 🔜 Week 10 |
